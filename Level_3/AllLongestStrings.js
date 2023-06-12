@@ -5,7 +5,8 @@ Example
 For inputArray = ["aba", "aa", "ad", "vcd", "aba"], the output should be
 solution(inputArray) = ["aba", "vcd", "aba"] */
 
-function solution(array) {
+function AllLongestStrings
+(array) {
   let longest = []
   const sortArray = array.sort((a, b) => b.length - a.length);
   let count=sortArray[0].length;
@@ -18,4 +19,4 @@ function solution(array) {
   console.log(sortArray)
   return longest
 }
-console.log(solution(["aba", "aa", "ad", "vcd", "aba"]))
+console.log(AllLongestStrings(["aba", "aa", "ad", "vcd", "aba"]))
