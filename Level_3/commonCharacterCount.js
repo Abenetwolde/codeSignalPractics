@@ -35,4 +35,15 @@ function commonCharacterCount(s1, s2){
 }
     return count;
 }
+/* function solution(s1, s2) {
+var a=s1.split(""),r=0
+while (a.length){
+var t=a.pop()
+if(s2.includes(t)){
+r++
+s2=s2.replace(t,"")
+}
+}
+return r
+} */
 console.log(commonCharacterCount("aabcc", "adcaa"))
