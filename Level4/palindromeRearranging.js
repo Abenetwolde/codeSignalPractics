@@ -49,5 +49,9 @@ console.log(palindromeRearranging("assj"))
 
 /* function solution(inputString) {
     return inputString.split('').sort().join('').replace(/(\w)\1/g,'').length < 2; 
+    The regular expression /(\w)\1/g used in the replace() method matches any word character 
+    (i.e., any alphanumeric character or underscore) that is immediately followed by the same character. 
+    The \w in the regular expression matches any word character, and the \1 matches the same character as the first captured group (i.e., the character matched by \w). The g flag at the end of the regular 
+    expression indicates that all matches should be replaced, not just the first one.
 }
  */
