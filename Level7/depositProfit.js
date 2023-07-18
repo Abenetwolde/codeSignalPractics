@@ -1,24 +1,13 @@
-function alphabeticShift(inputString) {
-    let result = "";
-    for (let i = 0; i < inputString.length; i++) {
-        let charCode = inputString.charCodeAt(i);
-        if (charCode === 122) { // 'z'
-            result += 'a';
-        } else if (charCode === 90) { // 'Z'
-            result += 'A';
-        } else {
-            result += String.fromCharCode(charCode + 1);
-        }
+function depositProfit(deposit, rate, threshold){
+    // const yearGap= threshold-deposit
+    // const raten= deposit*rate/100
+    // const result=  Math.floor(yearGap/raten)
+    // return result
+    let years = 0;
+    while (deposit < threshold) {
+        deposit += deposit * (rate / 100);
+        years++;
     }
-    return result;
+    return years;
 }
-console.log(alphabeticShift('jvdfgdfz'))
-// const solution = inputString =>
-//     inputString.split('').map(el => 
-//         (el === 'z') ? 'a' : String.fromCharCode(el.charCodeAt() + 1)
-//     ).join('')
-
-
-
-// This function uses the charCodeAt method to get the Unicode value of each character in the input string. It then checks if the character is ‘z’ or ‘Z’ and replaces it with ‘a’ or ‘A’, respectively. Otherwise, it increments the Unicode value by 1 and converts it back to a character using the fromCharCode method. 
-// The resulting characters are concatenated to form the output string.
+console.log(depositProfit(100,20,170))
